@@ -359,7 +359,7 @@ RA6A/
 ## Known Issues and Limitations
 
 - **CAD is incomplete** — see warnings at the top of this README.
-- **J2 structural deflection** — the shoulder joint deflects under load and is the weakest link in the arm. Pick payloads should be kept light, and the joint design should be reinforced or redesigned for higher-accuracy work. This single issue limits the overall achievable precision more than anything else.
+- **J2 structural deflection** — the shoulder joint deflects under load and is the weakest link in the arm. The joint design should be reinforced or redesigned for higher-accuracy work. This single issue limits the overall achievable precision more than anything else.
 - **Open-loop steppers** — no joint encoders, so position drift can occur if the arm hits hard limits. Re-home if motion becomes inaccurate.
 - **Real-time teleop is jittery** — the current architecture is optimized for planned trajectories, not continuous streaming. Pick-and-place works smoothly; live teleop does not.
 - **Singularities near vertical** — if the target pose is directly above the base, joint 5 reaches a singularity. Pre-rotate joint 1 to approach from an angle.
