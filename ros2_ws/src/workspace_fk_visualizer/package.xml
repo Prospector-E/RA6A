@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>workspace_fk_visualizer</name>
+  <version>0.1.0</version>
+  <description>FK workspace publisher for the RA6A arm — visualizes reachable space without requiring MoveIt 2 Python bindings</description>
+  <maintainer email="prospector-e@users.noreply.github.com">Prospector-E</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

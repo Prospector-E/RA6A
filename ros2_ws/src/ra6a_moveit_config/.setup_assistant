@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: ra6a
+    relative_path: urdf/ra6a.urdf
+  srdf:
+    relative_path: config/ra6a.srdf
+  package_settings:
+    author_name: Ali
+    author_email: ali.eng.works@gmail.com
+    generated_timestamp: 1771832311
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

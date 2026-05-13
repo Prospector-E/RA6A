@@ -1,0 +1,78 @@
+# ros2_controllers.yaml — AR4-style with velocity command interface
+# Place in: ~/ros2_ws/src/ra6a_moveit_config/config/ros2_controllers.yaml
+
+controller_manager:
+  ros__parameters:
+    update_rate: 60 #Hz
+
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    forward_position_controller:
+      type: forward_command_controller/ForwardCommandController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+arm_controller:
+  ros__parameters:
+    joints:
+      - j1
+      - j2
+      - j3
+      - j4
+      - j5
+      - j6
+
+    command_interfaces:
+      - position
+      - velocity
+
+    state_interfaces:
+      - position
+      - velocity
+
+    action_monitor_rate: 20.0
+    allow_partial_joints_goal: false
+    allow_nonzero_velocity_at_trajectory_end: true
+
+    constraints:
+      stopped_velocity_tolerance: 0.02
+      goal_time: 0.0
+      j1: { trajectory: 0.2, goal: 0.02 }
+      j2: { trajectory: 0.2, goal: 0.02 }
+      j3: { trajectory: 0.2, goal: 0.02 }
+      j4: { trajectory: 0.2, goal: 0.02 }
+      j5: { trajectory: 0.2, goal: 0.02 }
+      j6: { trajectory: 0.2, goal: 0.02 }
+
+    # PID gains — required when velocity command interface is present.
+    # p term handles position error, ff term passes through planned velocity.
+    # Since ff does most of the work, p can be small.
+    gains:
+      j1: { p: 2.0, d: 0.5, i: 0.0, i_clamp: 0.0 }
+      j2: { p: 2.0, d: 0.5, i: 0.0, i_clamp: 0.0 }
+      j3: { p: 2.0, d: 0.5, i: 0.0, i_clamp: 0.0 }
+      j4: { p: 2.0, d: 0.5, i: 0.0, i_clamp: 0.0 }
+      j5: { p: 2.0, d: 0.5, i: 0.0, i_clamp: 0.0 }
+      j6: { p: 2.0, d: 0.5, i: 0.0, i_clamp: 0.0 }
+
+    # Velocity feedforward — 1.0 means "pass through 100% of planned velocity"
+    velocity_ff:
+      j1: 1.0
+      j2: 1.0
+      j3: 1.0
+      j4: 1.0
+      j5: 1.0
+      j6: 1.0
+
+forward_position_controller:
+  ros__parameters:
+    joints:
+      - j1
+      - j2
+      - j3
+      - j4
+      - j5
+      - j6
+    interface_name: position
