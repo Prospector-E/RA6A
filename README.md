@@ -4,7 +4,6 @@
 
 Design, construction, and control of a 6-axis robotic arm built around an STM32F439ZI microcontroller and ROS 2 Humble with MoveIt 2. Capable of pick-and-place operation with vision-based cube detection.
 
-*Design, Construction, and Control of a 3D-Printed 6-Axis Robotic Arm*.
 
 ---
 
