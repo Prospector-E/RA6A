@@ -18,7 +18,6 @@ The STEP files in `hardware/cad/` are a **work-in-progress reference**, not a fi
 - **Joint 2 (shoulder) deflects under load** — the J2 mechanical design is structurally weak and visibly deflects when the arm extends or carries payload. The cantilever geometry concentrates stress at the joint, and PLA+ creep makes it worse over time. A replicator should reinforce J2 with metal brackets, redesign the joint with a thicker cross-section, or use a co-axial drive configuration instead of the offset design used here. This is a known unresolved issue and one of the biggest weaknesses of the current design.
 - **Belts are not modeled** — HTD-5M timing belts are used throughout. Lengths must be measured from your physical build.
 - **Many small errors exist** — incorrect tolerances on some bearing pockets, hole misalignments, missing fillets, and a few non-printable overhangs. Expect to fix issues as you print.
-- **STL files in `hardware/stl/`** are exported from the same imperfect CAD. Print test parts before committing to a full set.
 - **The gripper is not my design** — it's adapted from the AR4 open-source arm by Chris Annin (Annin Robotics). The original AR4 gripper files are available at https://www.anninrobotics.com — see the Acknowledgements section.
 
 If you're replicating this design, treat the CAD as a starting point — you will need to do your own engineering review and modifications.
