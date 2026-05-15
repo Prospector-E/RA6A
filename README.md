@@ -382,4 +382,4 @@ If you replicate the gripper, please credit Chris Annin / Annin Robotics in your
 
 ## License
 
-Released under the MIT License — see `LICENSE` for details. CAD files and STLs are provided as-is with no warranty of fitness for any purpose (see warnings above). The gripper design is adapted from AR4 (Annin Robotics) — see Acknowledgements; please honor the original project's licensing terms when redistributing gripper-related files.
+Released under the MIT License. CAD files are provided as-is with no warranty of fitness for any purpose (see warnings above). The gripper design is adapted from AR4 (Annin Robotics) — see Acknowledgements; please honor the original project's licensing terms when redistributing gripper-related files.
